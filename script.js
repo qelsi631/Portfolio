@@ -1,51 +1,29 @@
-  // const burger = document.getElementById('burger');
-  // const navMenu = document.getElementById('navMenu');
-  // const logo = document.getElementById('logo');
+  // const menuIcon = document.getElementById('menu-icon');
+  //   const nav = document.getElementById('fullscreen-nav');
+  //   const body = document.body;
 
-  // burger.addEventListener('click', () => {
-  //   burger.classList.toggle('active');
-  //   navMenu.classList.toggle('show');
+  //   menuIcon.addEventListener('click', () => {
+  //     nav.classList.toggle('active');
+  //     menuIcon.classList.toggle('open');
+  //     body.classList.toggle('no-scroll');
+  //   });
+
+  //   document.querySelectorAll('.fullscreen-nav a').forEach(link => {
+  //     link.addEventListener('click', () => {
+  //       nav.classList.remove('active');
+  //       menuIcon.classList.remove('open');
+  //       body.classList.remove('no-scroll');
+  //     });
+  //   });
+
+
+
+    const menuIcon = document.getElementById('menu-icon');
+const fullscreenNav = document.getElementById('fullscreen-nav');
+
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.toggle('open');
+  fullscreenNav.classList.toggle('open');
+  document.body.style.overflow = fullscreenNav.classList.contains('open') ? 'hidden' : 'auto';
+});
     
-  //   // Ndrysho ngjyrat
-  //   burger.classList.toggle('white');
-  //   logo.classList.toggle('white');
-  //   body.classList.toggle('no-scroll'); // This will disable/enable scrol
-  // });
-
-
-
-
-
-
-
-
-
-
-
-  const burger = document.getElementById('burger');
-const navMenu = document.getElementById('navMenu');
-const logo = document.querySelector('.logo'); // fix this too
-const body = document.body; // <-- Add this line
-
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  navMenu.classList.toggle('show');
-
-  burger.classList.toggle('white');
-  logo.classList.toggle('white');
-  body.classList.toggle('no-scroll'); // Now this works
-});
-
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-
-
-
-
-  
