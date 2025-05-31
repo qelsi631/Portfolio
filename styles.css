@@ -186,6 +186,13 @@ strong {
 }
 
 
+.project-card img{
+  width: 100%;
+}
+.github img{
+  width: 2rem;
+}
+
 
 
 /* Responsive layout */
