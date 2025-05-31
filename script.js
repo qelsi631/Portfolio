@@ -26,4 +26,23 @@ menuIcon.addEventListener('click', () => {
   fullscreenNav.classList.toggle('open');
   document.body.style.overflow = fullscreenNav.classList.contains('open') ? 'hidden' : 'auto';
 });
+
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    header.style.top = '-100px'; // hide
+  } else {
+    // Scrolling up
+    header.style.top = '0'; // show
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative
+});
+
     
