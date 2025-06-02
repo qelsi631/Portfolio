@@ -15,6 +15,23 @@ body {
   padding: 40px 60px;
 }
 
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#toggle-btn{
+  float: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-40px);
+}
+
+#toggle-btn img {
+    width: 2rem;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -209,7 +226,7 @@ strong {
   width: 86%;
   transform: translate(100px, 150px);
   height: 35vh;
-  background-color: #ddd;
+  background-color: #f3f4f6;
   padding: 25px;
   border-radius: 5px;
 }
