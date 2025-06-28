@@ -1,24 +1,5 @@
-  // const menuIcon = document.getElementById('menu-icon');
-  //   const nav = document.getElementById('fullscreen-nav');
-  //   const body = document.body;
-
-  //   menuIcon.addEventListener('click', () => {
-  //     nav.classList.toggle('active');
-  //     menuIcon.classList.toggle('open');
-  //     body.classList.toggle('no-scroll');
-  //   });
-
-  //   document.querySelectorAll('.fullscreen-nav a').forEach(link => {
-  //     link.addEventListener('click', () => {
-  //       nav.classList.remove('active');
-  //       menuIcon.classList.remove('open');
-  //       body.classList.remove('no-scroll');
-  //     });
-  //   });
-
-
-
-    const menuIcon = document.getElementById('menu-icon');
+ 
+ const menuIcon = document.getElementById('menu-icon');
 const fullscreenNav = document.getElementById('fullscreen-nav');
 
 menuIcon.addEventListener('click', () => {
@@ -35,14 +16,14 @@ window.addEventListener('scroll', () => {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
-    // Scrolling down
-    header.style.top = '-100px'; // hide
+
+    header.style.top = '-100px'; 
   } else {
-    // Scrolling up
-    header.style.top = '0'; // show
+    
+    header.style.top = '0'; 
   }
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
 });
 
     
