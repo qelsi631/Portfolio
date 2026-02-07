@@ -32,3 +32,12 @@ const toggleBtn = document.getElementById("toggle-btn");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
+
+
+
+
+fetch('http://localhost:3000/api/visit',{
+  method:'POST',
+  headers:{'Content-Type':'application/json'},
+  body: JSON.stringify({ page: window.location.pathname })
+});
